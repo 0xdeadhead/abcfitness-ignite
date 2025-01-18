@@ -2,7 +2,7 @@
 # abcfitness ignite
 
 
-![ignite-er-diagram](https://raw.githubusercontent.com/0xdeadhead/abcfitness-ignite/refs/heads/main/abc-fitness-ignite.svg)
+![ignite-er-diagram](https://raw.githubusercontent.com/0xdeadhead/abcfitness-ignite/refs/heads/main/abcfitness-schema-diagram.png)
 
 # Installation and usage instructions
 1. clone and navigate to this git repo's root directory
