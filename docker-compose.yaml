@@ -1,0 +1,25 @@
+version: "1.0"
+
+services:
+    database_server:
+      image: mysql:8.0
+      restart: always
+      environment:
+        MYSQL_DATABASE: ignite
+        MYSQL_USER: abcfitness
+        MYSQL_PASSWORD: abcfitness
+        MYSQL_ROOT_PASSWORD: abcfitness
+      ports:
+        - '3307:3306'
+      healthcheck:
+        test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u abcfitness", "-p abcfitness"]
+        interval: 5s
+        retries: 5
+        start_period: 5s
+    ignite_web_service:
+        image: ignite_web_service
+        ports:
+          - "8080:8080"
+        depends_on:
+          database_server:
+            condition: service_healthy
