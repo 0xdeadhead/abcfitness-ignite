@@ -54,7 +54,7 @@ public class ClubClassService implements ClubClassServiceI {
             clubClassRepository.save(clubClassEntity);
         } else {
             throw BusinessException.builder().status(400)
-                    .message("Club is already occupied with other classes in given dates").build();
+                    .message("Club is already occupied with other classes on given dates").build();
         }
         return clubClassEntity;
     }
